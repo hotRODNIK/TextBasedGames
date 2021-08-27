@@ -3,5 +3,4 @@ I've gotten hooked on making text-based games - you'll find all of them here. So
 ## Games:
 2-Player Tic Tac Toe in Java (Completed and in Repo)\
 2-Player Tic Tac Toe in C (In Progress)\
-Single Player Battleship in Java (In Progress)\
-Single Player Battleship in C (TBD)
+2-Player Battleship in Java (Completed and in Repo)\
