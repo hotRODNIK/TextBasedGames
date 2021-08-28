@@ -43,7 +43,9 @@ public class Main {
             TimeUnit.SECONDS.sleep(1);
 
             while (!GameLogic.gameOver(cGrid2, pGrid2)){
+                System.out.println(GameLogic.getSunk(name1, name2));
                 System.out.println(pGrid);
+                System.out.println(pGrid2);
                 System.out.println(name1 + "'s turn\nPlease Enter a Valid Coordinate from the Grid to Attack");
                 System.out.println("Coordinates Must be Entered in the Form of ab, Where a is the Vertical Coordinate and b is the Horizontal Coordinate");
                 input = s.next().toUpperCase();
@@ -57,7 +59,7 @@ public class Main {
                 // Need to check if the entered move is valid
                 System.out.println("Checking Move...");
                 TimeUnit.SECONDS.sleep(1);
-                GameLogic.checkMove(cGrid, pGrid2, input);
+                GameLogic.checkMove(cGrid, pGrid2, input, 1); // Player one check move
                 System.out.println(pGrid2);
 
                 // Check that the game didn't end
@@ -68,8 +70,10 @@ public class Main {
 
                 // Player two's turn
                 System.out.println(name1 + " switch with " + name2);
-                TimeUnit.SECONDS.sleep(10);
+                TimeUnit.SECONDS.sleep(5);
+                System.out.println(GameLogic.getSunk(name1, name2));
                 System.out.println(cGrid);
+                System.out.println(cGrid2);
                 System.out.println(name2 + "'s turn\nPlease Enter a Valid Coordinate from the Grid to Attack");
                 System.out.println("Coordinates Must be Entered in the Form of ab, Where a is the Vertical Coordinate and b is the Horizontal Coordinate");
                 input = s.next().toUpperCase();
@@ -83,10 +87,10 @@ public class Main {
                 // Need to check if the entered move is valid
                 System.out.println("Checking Move...");
                 TimeUnit.SECONDS.sleep(1);
-                GameLogic.checkMove(pGrid, cGrid2, input);
+                GameLogic.checkMove(pGrid, cGrid2, input, 2); // Player two check move
                 System.out.println(cGrid2);
                 System.out.println(name2 + " switch with " + name1);
-                TimeUnit.SECONDS.sleep(10);
+                TimeUnit.SECONDS.sleep(5);
             }
 
             System.out.println("Game Over");
