@@ -4,5 +4,5 @@ This directory contains all of the source files for my Battleship implementation
 and requires no external libraries or dependencies. Have fun!
 
 # To Compile and Run:
-javac Main.java
+javac Main.java  
 java Main
